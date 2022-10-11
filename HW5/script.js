@@ -35,15 +35,29 @@ const authorization = () =>{
 // Second task
 
 const primeNum = (a,b) => {
-    nextPrime:
+    if (a>1){
+    mark:
     for (let i = a; i<=b; i++){
 
         for (let j = 2; j<i; j++){
             if (i%j === 0) {
-              continue nextPrime;
+              continue mark;
             }
         }
         console.log(i);
     }
+    } else {
+        a=2;
+        mark:
+        for (let i = a; i<=b; i++){
+    
+            for (let j = 2; j<i; j++){
+                if (i%j === 0) {
+                  continue mark;
+                }
+            }
+            console.log(i);
+        }
+    }
 }
-primeNum(2,10);
+primeNum(1,12);
