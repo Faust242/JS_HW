@@ -1,0 +1,33 @@
+.container{
+    /* max-width: 1200; */
+    display: flex;
+    width: 1200px;
+    margin: 100px auto;
+    justify-content: center;
+    
+}
+.slider_img{
+    display: none;
+    width: 300px;
+    border: 2px solid blue;
+}
+.btn{
+    width:90px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    margin: 10px;
+    font-size: 16px;
+}
+.btns{
+  
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: center;
+}
+
+.active{
+    display: inline-block;
+}
