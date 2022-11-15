@@ -4,15 +4,15 @@
 
 const countTrue = (booleanArr) => {
     counter = 0;
-    booleanArr.forEach((item, i) =>{
-       if (item === true){
+    booleanArr.forEach((item) =>{
+       if (item){
         counter++;
        }
     })
     return counter
 }
 
-console.log(countTrue([true, false, false, true, false])); // -> 2
+console.log(countTrue([true, false, false, true, false, true, true])); // -> 2
 console.log(countTrue([false, false, false, false])); // -> 0
 console.log(countTrue([])); // -> 0
 
@@ -32,11 +32,10 @@ const getOccurrencesCount = (arr) => {
     }
     return newObj;
 }
-
-console.log(getOccurrencesCount(["a", "v", "a", "b", "b"]));
+console.log(getOccurrencesCount(["a", "v", "a", "b", "b", "a", "b", "b", "a", "v", ]));
 // {
 //   a: 2,
-//   v: 1,
+//   v: 1,  
 //   b: 2,
 // }
 
@@ -65,7 +64,7 @@ const findExcess= (arr)=>{
     let countEven = 0;
     let extraNumber;
     arr.forEach(function(item, i){
-        item += 2%2 
+      
 // Check even or odd
         checkArr[i] = item%2
 // Count even and odd in array
@@ -75,12 +74,12 @@ const findExcess= (arr)=>{
 // Search extraNumber
         if (countEven<countOdd){
             for (let i in arr){
-               if ((arr[i]+2)%2 === 0){
+               if ((arr[i])%2 === 0){
                 extraNumber = arr[i]
                }
             }
         } else {for (let i in arr){
-            if ((arr[i]+2)%2 !== 0){
+            if ((arr[i])%2 !== 0){
              extraNumber = arr[i]
             }
          }}
@@ -89,6 +88,8 @@ const findExcess= (arr)=>{
     return extraNumber
 }
 
+
+
 console.log(findExcess([0, 1, 2])); // -> 1
 console.log(findExcess([1, 2, 3])); // -> 2
 console.log(findExcess([2, 6, 8, 10, 3])); // -> 3
@@ -96,3 +97,4 @@ console.log(findExcess([0, 0, 3, 0, 0])); // -> 3
 console.log(findExcess([1, 1, 0, 1, 1])); // -> 0
 
 
+undefind + 1

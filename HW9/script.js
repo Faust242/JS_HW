@@ -74,7 +74,7 @@ function average(arr){
   })
   return result/arr.length
 }
-console.log(average([1, 10, 17, 24, 45]))
+console.log(average([1, 10, 17, 24, 45, 100]))
 
 
 //Second task
@@ -176,4 +176,4 @@ const data = [
 
 console.log(filterData(data, { age: 24, isActive: true }));
 console.log(filterData(data, { age: 19}));
-console.log(filterData(data, { position: 'middle', age: 24}));
+console.log(filterData(data, { position: 'middle', age: 24}));  
