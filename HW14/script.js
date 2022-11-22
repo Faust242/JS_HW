@@ -32,10 +32,6 @@
 
   const dataObj = {};
 
-  const dataObject = function(e){
-    e.preventDefault();
-  }
-
 
   const createForm = function(arr){  
     const form = document.createElement('form');
@@ -64,6 +60,7 @@
                 inputEl.addEventListener('input', (e)=> {
                     const key = e.target.getAttribute('name')
                     dataObj[`${key}`] = `${e.target.value}`
+                 
                 })
               
             } else if(obj.element === 'select'){
@@ -88,7 +85,6 @@
                 divEl.append(labelEl);
                 divEl.append(selectEl);
                 selectEl.addEventListener('input', (e)=> {                   
-                     let key = e.currentTarget
                      dataObj.value = `${e.target.value}`
                  })
             }
@@ -98,12 +94,10 @@
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         console.log(dataObj)
+
     })
-  }
 
+  }     
   createForm(formConfig);
-
-
-
 
 
