@@ -112,16 +112,32 @@ console.log(str.match(/\w[\d]+\w/g))
 
 
 
-const testResult = /^[a-zA-Z0-9][a-zA-Z0-9-_]{1,}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/g
+const testResult = /^[-a-zA-Z0-9._]+\.[a-zA-Z]{2,}$/
 
-console.log(testResult.test('google.com'))
-console.log(testResult.test('ex.ua'))
-console.log(testResult.test('yandex.ru'))
-console.log(testResult.test('site.com.ua'))
-console.log(testResult.test('my-page.com'))
-console.log(testResult.test('s.com.ua'))
-console.log(testResult.test('my.c'))
-console.log(testResult.test('m_y.c0'))
+const strings = [
+    'ex.ua',
+    'google.com',
+    'yandex.ru',
+    'site.com.ua',
+    'my-page.com',
+    's.com.ua',
+    'my.c',
+    'm_y.c0'
+]
+
+for (let s of strings) {
+    const re = new RegExp(testResult)
+    console.log(s+": "+testResult.test(s))
+}
+
+// console.log(testResult.test('kkkkk.ua'))
+// console.log(testResult.test('google.com'))
+// console.log(testResult.test('yandex.ru'))
+// console.log(testResult.test('site.com.ua'))
+// console.log(testResult.test('my-page.com'))
+// console.log(testResult.test('s.com.ua'))
+// console.log(testResult.test('my.c'))
+// console.log(testResult.test('m_y.c0'))
 
 //5.3
 // Напишите регулярное выражаение, которое проверяет строку:
