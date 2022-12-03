@@ -125,6 +125,12 @@ const strings = [
     'm_y.c0'
 ]
 
+console.log(strings.slice(1,3))
+console.log(strings)
+
+console.log(strings.splice(2,1,'chess.com'))
+console.log(strings)
+
 for (let s of strings) {
     const re = new RegExp(testResult)
     console.log(s+": "+testResult.test(s))
@@ -146,3 +152,81 @@ for (let s of strings) {
 
 const strReg = /\d{12,}/gm
 
+
+const userMax = {age: 42, 
+                name: 'Max', 
+                status: 'Single', 
+                gender: 'Male'}
+
+
+for (let key in userMax){
+    console.log(key, userMax[key])
+}
+
+
+
+const greet = name => `Hey ${name}`;
+console.log(greet("Hagrid")) //"Hey Hagrid!" 
+greet("Luna") //"Hey Luna!"
+
+// DO NOT ALTER THE FOLLOWING CODE:
+const fullNames = [{first: 'Albus', last: 'Dumbledore'}, {first: 'Harry', last: 'Potter'}, {first: 'Hermione', last: 'Granger'}, {first: 'Ron', last: 'Weasley'}, {first: 'Rubeus', last: 'Hagrid'}, {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}];
+const firstNames = fullNames.map((name) => {
+   return name.first
+})
+console.log(firstNames)
+
+function validUserNames(usernames) {
+    return usernames.filter((name) => {
+        return name.length<10
+
+    })
+}
+
+console.log(validUserNames(['mark', 'staceysmom1978', 'q29832128238983', 'carrie98', 'MoanaFan']))
+
+
+// Задание:
+
+// В каждой книге есть n страниц с номерами страниц от 1 до n. Написать функцию amountOfPages, 
+// аргумент которой summary составляется путем сложения количества цифр всех номеров страниц. 
+// Эта функция возвращает число - количество страниц n в книге. Чтобы было понятно что такое количество цифр, давайте рассмотрим примеры.
+
+// Пример:
+// Если на входе функции summary = 25, то на результат должен быть 17. Всего в числах от 1 до 17 содержится 25 цифр: 1234567891011121314151617.
+// Функция на вход как раз принимает это общее количество цифр, а возвращает конечное число, то есть последнюю страницу книги.
+
+//         amountOfPages(5) => 5
+
+//         amountOfPages(25) => 17
+
+//         amountOfPages(1095) => 401   
+
+//         amountOfPages(185) => 97
+
+const amountOfNumbers = (pages) => {
+  const numbers = [];
+  for (let i=1; i<=pages; i++){
+    let arr = i+''
+    console.log(arr.length)
+    for (let j = 0; j<arr.length; j++){
+      numbers.push(j);
+  }}
+  return numbers.length
+}
+console.log(amountOfNumbers(401))
+
+const amountOfPages = (numbers) =>{
+  if (numbers<=10) pages = numbers 
+  if (numbers>10 && numbers<100){
+   pages = 9+((numbers - 9))/2}
+  if (numbers>=100 && numbers<1000){
+    pages = 54 + (numbers - 99)/2
+  }
+  if (numbers>=1000 && numbers<10000){
+    pages = 9+((numbers - 9))/2
+  }
+  return pages
+}
+
+console.log(amountOfPages(889))
