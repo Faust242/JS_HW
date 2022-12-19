@@ -54,3 +54,103 @@ stopBtn.addEventListener('click', stop)
 
 
 
+
+/////////////////////////////////////////////
+// const div = document.createElement('div');
+// document.body.append(div);
+// const btn = document.createElement('button');
+// btn.innerHTML = 'Change color';
+// div.append(btn);
+
+//  const changeColor = (el, color, delay) => {
+//     return new Promise((resolve) => 
+//         setTimeout(()=> {
+//             el.style.backgroundColor = color;
+//             resolve()
+//         }, delay))
+//     }
+    
+// async function changing(){
+//     await changeColor(div, 'orange', 1000)
+    
+//     await changeColor(div, 'black', 1000)
+  
+//     await changeColor(div, 'red', 1000)
+   
+//     await changeColor(div, 'yellow', 1000)
+   
+//     await changeColor(div, 'green', 1000)
+ 
+//     await changeColor(div, 'olive', 1000)
+    
+//     await changeColor(div, 'blue', 1000)
+// }
+
+// changing()
+
+
+// const Car = function(make, speed){
+//    this.speed = speed;
+//    this.make = make;
+// }
+
+// const bmw = new Car('BMW', 120);
+// const mercedes = new Car('Mercedes', 95);
+// Car.prototype.accelerate = function() {
+//     this.speed += 10;
+//     console.log(`${this.make} is going ${this.speed} km/h`)
+// }
+// Car.prototype.break = function() {
+//     this.speed -= 5;
+//     console.log(`${this.make} is going ${this.speed} km/h`)
+// }
+// bmw.accelerate();
+// bmw.break();
+
+// class CarClass {
+//     constructor(make, speed){
+//         this.speed = speed;
+//         this.make = make;
+//     }
+
+//     accelerate () {
+//         this.speed += 10;
+//         console.log(`${this.make} is going ${this.speed} km/h`)
+//     }
+
+//     break () {
+//         this.speed -= 5;
+//         console.log(`${this.make} is going ${this.speed} km/h`)
+//     }
+
+//     get speedUS(){
+//         return this.speed/1.6
+//     }
+
+//     set speedUS(speed){
+//         this.speed = speed*1.6;
+//     }
+//  }
+
+//  const ford = new CarClass('Ford', 120)
+//  console.log(ford.speedUS);
+
+//  ford.speedUS = 60;
+//  console.log(ford)
+
+
+
+//// HTTPRequest
+// const userXhr = new XMLHttpRequest()
+// userXhr.onreadystatechange = ()=>{
+//     const {readyState} = userXhr;
+//     console.log(readyState)
+// }
+// userXhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+// userXhr.send();
+// userXhr.onload = ()=>{
+//     const result =JSON.parse(userXhr.response)
+//     console.log(result)
+// }
+// console.log(userXhr)
+ 
